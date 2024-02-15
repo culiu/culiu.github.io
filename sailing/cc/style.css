@@ -1,0 +1,150 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS for the general layout */
+body {
+    background: url('sea.jpg') no-repeat center center fixed; /* Replace 'sea.jpg' with the path to your sea/ocean image */
+background-color: #87CEEB;
+}
+
+header, nav, main, footer {
+    padding: 20px;
+}
+
+header {
+    background-color: #BFEFFF;
+}
+
+nav {
+    background-color: #FFFFFF;
+}
+
+main {
+    background-color: #FFFFFF;
+}
+
+footer {
+    background-color: #BFEFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000080;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+    color: #000000;
+}
+
+/* CSS for the gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 50px; /* Adjust the size as needed */
+margin: 5px;
+}
+
+.gallery img:hover {
+    border: 2px solid black;
+}
+
+/* CSS for the carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 300%; /* Adjust the size as needed */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}
+
+/* CSS for the personal page section */
+.personal-page {
+    /* Add any specific styles for the personal page section here */
+}
+
+.personal-page img {
+    width: 320px; /* Adjust the size as needed */
+}
+
+/* Existing styles remain unchanged */
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 600px; /* Adjust based on your layout */
+    margin: auto;
+  }
+  
+  .carousel-container {
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    width: 100%;
+  }
+  
+  .carousel-slide img {
+    max-width: 33.33%;
+    display: none; /* Hide images by default, show 3 using JS */
+    transition: transform 0.5s ease;
+  }
+  
+  button.prev,
+  button.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  button.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  button.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  button.prev:hover, button.next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  

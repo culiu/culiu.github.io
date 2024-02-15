@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Sailing Adventure</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+<!-- Your original header code remains the same -->
+</header>
+<section class="personal-page">
+<h1>欢迎来到三亚帆船营</h1>
+<h1>我的个人主页(*^_^*)</h1>
+<h1><strong>姓名：</strong>成成</h1>
+<h1><strong>年龄：</strong> 9岁</h1>
+<h1><strong>爱好：</strong> 画画、运动（骑自行车……）</h1>
+<h1>这是我的个人主页，我可以在这里展示更多有关我自己的信息。</h1>
+<h1>联系方式：1370999868</h1>
+<h1>2024/2/11~到2024/2/15</h1>
+<h1>欢迎访问我的网页，在这里你可以了解更多关于我的信息，我的爱好，以及我喜欢的东西。</h1>
+</section>
+<!-- Photo Carousel Section -->
+<section id="photo-carousel" class="carousel">
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="photo1.jpg" alt="Photo 1">
+            <img src="photo2.jpg" alt="Photo 2">
+            <img src="photo3.jpg" alt="Photo 3">
+            <img src="photo4.jpg" alt="Photo 1">
+            <img src="photo5.jpg" alt="Photo 2">
+            <img src="photo6.jpg" alt="Photo 3">
+            <!-- Add more photos as needed -->
+        </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</section>
+<script>
+// JavaScript for Carousel
+let slideIndex = 0;
+showSlides(slideIndex);
+
+function moveSlide(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("carousel-slide")[0].getElementsByTagName("img");
+  if (n >= slides.length) {slideIndex = 0}
+  if (n < 0) {slideIndex = slides.length - 1}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex].style.display = "block";
+  slides[slideIndex + 1 % slides.length].style.display = "block";
+  slides[(slideIndex + 2) % slides.length].style.display = "block";
+}
+</script>
+</body>
+</html>
