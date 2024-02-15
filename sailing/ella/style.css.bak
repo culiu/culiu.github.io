@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #e0f7fa; /* 浅蓝色背景，类似大海的颜色 */
+}
+.container {
+    margin: 20px 0;
+    background-color: #b2ebf2; /* 容器使用更深一点的海蓝色 */
+    padding: 20px;
+    border-radius: 10px; /* 容器边缘圆滑 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.text-intro, .photo-intro {
+    flex: 1;
+}
+.intro-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px; /* 圆形照片 */
+    object-fit: cover;
+}
+.photo-placeholder, .video-placeholder {
+    background-color: #00acc1; /* 更鲜艳的海蓝色，用于图片和视频占位符 */
+    color: white; /* 占位符文本颜色 */
+    text-align: center;
+    line-height: 200px; /* 这个高度可以根据你的需要调整 */
+    margin-bottom: 20px;
+}
+.photo-placeholder {
+    height: 200px; width: 200px; margin: auto;
+    border-radius: 100px; /* 圆形图片占位符 */
+}
+.video-placeholder {
+    height: 240px; width: 320px; margin: auto;
+    border-radius: 10px; /* 视频占位符边缘圆滑 */
+}
+
+/* 新增样式 */
+.photos-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; /* 图片之间的间隙 */
+}
+
+.photo {
+    max-width: 30%; /* 每张照片最大宽度，根据需要调整 */
+    height: auto; /* 高度自动调整以保持图片比例 */
+}

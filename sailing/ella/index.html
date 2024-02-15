@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的个人介绍</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="intro-container">
+            <div class="text-intro">
+                <h1>我的个人介绍</h1>
+                <p>这里是你的个人介绍。可以包括你的名字、年龄、你喜欢的事物、你的梦想等等。我叫柴欣言，我今年10岁了，要说我最喜欢身边的哪个事物，那肯定是那无边无际的大海了，我长大想成为一名医生，为大家救死扶伤，研究各种现在研究不出来的药，从现在开始我要开始努力了！</p>
+            </div>
+            <div class="photo-intro">
+                <img src="profile.jpg" alt="个人照片" class="intro-photo">
+            </div>
+        </div>
+    </div>
+        <section id="sailing-photos">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="photo1.jfif" alt="Sailing 1"></div>
+                    <div class="swiper-slide"><img src="photo2.jfif" alt="Sailing 2"></div>
+		<div class="swiper-slide"><img src="photo3.jfif" alt="Sailing 3"></div>
+                    <!-- 更多的Swiper Slide -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+            <p> 这是我上次在石梅湾浮潜前和浮潜后的照片，我在浮潜的时候看见了很多海洋生物，可惜那里不让拍照，但我可以给你们讲一讲，哪里有很多小鱼，我在石头缝里还看见了一只特别的大的寄居蟹，我还把它拿上来玩了玩，突然，我看见一个下面是灰色，上面是白色的背鳍，那不就是白鳍鲨吗，他比我小多了，但他可比我胖，长得好有趣，教练还从海里捞出了跟我练一样大的面包海星，这一次浮潜可真有趣啊！</p>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.mySwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+</body>
+</html>
