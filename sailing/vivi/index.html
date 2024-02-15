@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<title>郭梓涵的网站</title>
+</head>
+<body background="f8fb06e51d532c1af756f22f242440ac.jpeg">
+<section id="intro">
+<h1>Hello！我是郭梓涵</h1>
+<p>这是我的个人介绍：</p>
+    <p>我的家乡在郑州，我上三年级，有许多爱好，比如弹钢琴🎹、看书、打网球🎾······</p>
+<img src="1.jpg" alt="我的照片" style="width: 200px; height: 200px;">
+    <img src="me.JPG" alt="我的照片" style="width: 200px; height: 200px;">
+</section>
+<section id="activities">
+<h2>最近的活动</h2>
+<p>我参加了一个帆船营。</p>
+    <p>下面我来给大家讲一讲我们这几天的趣事吧！
+   我们这个帆船营分为两个小组，分别为A组和B组，我在A组，每个小组都有4个小朋友，A组在第一天下午与第三天下午出海，B组在第三天上午与第五天上午出海。
+        悄悄告诉你：我们轮流掌舵，风吹着船帆，我们的船就像游乐园的海盗船一样，左摇右晃，刺激极了！还有呢，在第三天下午出海时，爸爸给我了他的警察遮阳帽👒，我把它带在头上，不过在我升帆的时候，帽子却被风吹走了，它掉在海面上，漂啊漂啊，在海面上自由自在的旅行，它时而与海浪一起翻跟头、时而陪小鱼们玩躲猫猫、时而看水母穿不同颜色的舞裙👗跳舞。
+    </p>
+</section>
+
+        <section id="sailing-photos">
+            <h2>航海照片</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" style="text-align:center">
+                    <div class="swiper-slide"><img src="WechatIMG2.jpeg" alt="Sailing 1"></div>
+                    <div class="swiper-slide"><img src="WechatIMG3.jpeg" alt="Sailing 2"></div>
+                     <div class="swiper-slide"><img src="WechatIMG4.jpeg" alt="Sailing 3"></div>
+                    <!-- 更多的Swiper Slide -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+<section id="decoration">
+
+<img src="sea bird.jpeg" alt="海鸟">
+    <img src="fish.jpeg" alt="小鱼">
+<h2>以上为海洋装饰</h2>
+</section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.mySwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+</body>
+</html>
