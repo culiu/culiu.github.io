@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C Page</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<style>
+/* Apply beach color blend background */
+body {
+  background: linear-gradient(to bottom, #87CEEB, #CD853F); /* Sky Blue to Peruvian Brown */
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 80px; /* Width of the sidebar */
+  background-color: #333; /* Background color of the sidebar */
+  height: 100vh; /* Set height to full viewport height */
+  position: fixed; /* Fixed position so it stays in place */
+  top: 0; /* Align to the top */
+  left: -80px; /* Initially hide the sidebar */
+  transition: left 0.3s; /* Smooth transition effect */
+}
+
+.right-section:hover + .sidebar,
+.sidebar:hover {
+  left: 0; /* Show sidebar on hover */
+}
+
+.sidebar nav ul {
+  padding: 20px 0; /* Add padding top and bottom */
+}
+
+.sidebar nav ul li {
+  list-style: none; /* Remove bullet points */
+  text-align: center; /* Center align text */
+  margin-bottom: 20px; /* Add some spacing between items */
+}
+
+.sidebar nav ul li a {
+  display: block; /* Make links full width */
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Text color */
+}
+
+.sidebar img {
+  width: 30px; /* Set width of sidebar icons */
+  height: 30px; /* Set height of sidebar icons */
+}
+
+/* Right section styles */
+.right-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 80px); /* Adjust width based on sidebar width */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.right-section .content-wrapper {
+  white-space: nowrap;
+  animation: conveyor-animation 10s linear infinite;
+}
+
+.right-section .content-wrapper img {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between images */
+  height: 100%; /* Ensure images fill the height of the container */
+}
+
+/* Video player styles */
+.video-player {
+  display: flex;
+  justify-content: space-between;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
+  max-width: calc(100% / 3 - 20px); /* Adjust video width based on the number of videos */
+}
+
+</style>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <nav>
+    <ul>
+      <li class="sidebar-heading"> Sidebar </li> <!-- Sidebar heading -->
+       <li class="sidebar-heading"> navgations </li> <!-- Sidebar heading -->
+      <li><a href="index.html"><img src="images/home.png" alt="index"></a></li>
+      <li><a href="about.html" id="aboutLink"><img src="images/info.png" alt="about"></a></li>
+      <li><a href="portfolio.html"><img src="images/openteen.png" alt="Portfolio"></a></li>
+    </ul>
+  </nav>
+</div>
+
+<header>
+  <section class="text-placeholder">
+    <p>This is the main content area. Replace this with your text content.</p>
+  </section>
+</header>
+
+<main>
+  <section class="video-player">
+    <video id="video1" controls onended="playNextVideo()">
+      <source src="images/CCrobot1V.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video2" controls onended="playNextVideo()">
+      <source src="images/CCrobot2V.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video3" controls onended="playNextVideo()">
+      <source src="images/CCrobot3V.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="text-placeholder">
+    <p>As a 12-year-old boy, I find joy and passion in various creative pursuits. One of my primary interests lies in the realm of 3D modeling. Exploring the digital landscape and crafting intricate designs fascinates me, allowing my imagination to soar as I bring my ideas to life in virtual space.
+
+Beyond 3D modeling, I am an active member of the Openteens community. Being part of a group where creativity and innovation thrive provides me with opportunities to collaborate, learn, and share my own projects with like-minded individuals. The supportive environment encourages me to push the boundaries of my skills and explore new avenues of creativity.
+
+Unlike many of my peers, I find little interest in video games. Instead, I prefer to channel my energy into making things. Whether it's crafting animations, designing 3D prints, or engaging in other hands-on activities, I relish the process of creation. Each project presents its own set of challenges and rewards, fueling my desire to continually learn and grow as a creator.
+
+In addition to my creative pursuits, I am an avid reader with a particular fondness for books that captivate my imagination. While I enjoy a wide range of genres, I find myself drawn to books that offer unique and thought-provoking narratives. Elon Musk's biography, detailing his remarkable journey and vision for the future, resonates deeply with me, inspiring me to dream big and strive for excellence in all that I do.
+
+Another series that holds a special place in my heart is "Wings of Fire," with its richly imagined world and compelling characters. The epic adventures and moral dilemmas presented within its pages captivate my attention and ignite my imagination. Similarly, the tales of Tom Swift, the young inventor in the "Tom Swift" series, and the magical mishaps of the students in "Upside-Down Magic" provide endless entertainment and inspiration.
+
+In essence, I am a young creator with a passion for bringing ideas to life through 3D modeling, animation, and other creative endeavors. While I may not follow the conventional path of gaming, I find fulfillment in the act of making and the exploration of imaginative worlds through literature. With each project and story, I embark on a journey of discovery and self-expression, eager to see where my creativity will take me next..</p>
+<section class="text-placeholder">
+    <p>text put here</p>
+  </section>
+</main>
+
+<section id="sailing-photos">
+  <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/3d.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/3d2.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/3d5.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/3d6.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/3d7.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/3d8.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/3d9.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/b.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/b2.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/b3.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/b5.jpg" alt="Sailing 1"></div>
+          <div class="swiper-slide"><img src="images/b6.jpg" alt="Sailing 1"></div>
+          <!-- 更多的Swiper Slide -->
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; CuLiu's@Sanya trip//JackCraft//JackLu</p>
+</footer>
+
+<script>
+  // Generate a random color
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  // Apply random color to the header and footer
+  var header = document.querySelector('header');
+  var footer = document.querySelector('footer');
+  header.style.backgroundColor = getRandomColor();
+  footer.style.backgroundColor = getRandomColor();
+
+  var currentVideo = 1;
+  function playNextVideo() {
+    currentVideo++;
+    if (currentVideo > 3) currentVideo = 1;
+    var videoElement = document.getElementById('video' + currentVideo);
+    videoElement.play();
+  }
+
+  // Auto-click the "About" button when the sidebar opens
+  document.getElementById('sidebar').addEventListener('transitionend', function(event) {
+    if (event.propertyName === 'left' && event.target.classList.contains('sidebar') && event.target.style.left === '0px') {
+      document.getElementById('aboutLink').click();
+    }
+  });
+</script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.mySwiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Apply beach color blend background */
+body {
+  background: linear-gradient(to bottom, #87CEEB, #CD853F); /* Sky Blue to Peruvian Brown */
+}
+
+/* Sidebar styles */
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 100px; /* Increase the width of the sidebar */
+  background-color: #333; /* Background color of the sidebar */
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -100px; /* Adjust the initial position */
+  transition: left 0.3s; /* Smooth transition effect */
+  z-index: 2; /* Ensure sidebar is above hover area */
+}
+
+.hover-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 87px; /* Adjust the width of the hover area to 87px */
+  height: 100vh;
+  z-index: 1; /* Ensure hover area is below sidebar */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar nav ul {
+  padding: 20px 0; /* Add padding top and bottom */
+}
+
+.sidebar nav ul li {
+  list-style: none; /* Remove bullet points */
+  text-align: center; /* Center align text */
+  margin-bottom: 20px; /* Add some spacing between items */
+}
+
+.sidebar nav ul li a {
+  display: block; /* Make links full width */
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Text color */
+}
+
+.sidebar img {
+  width: 37px; /* Set width of sidebar icons */
+  height: 37px; /* Set height of sidebar icons */
+}
+
+/* Initially show the sidebar */
+.sidebar-container {
+  left: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 400px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
