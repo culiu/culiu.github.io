@@ -24,3 +24,15 @@ body {
     width: 100%;
     height: auto;
 }
+
+/* 新增视频区域样式 */
+.video-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video-section video {
+    width: 100%; /* 视频宽度自适应容器 */
+    max-width: 600px; /* 最大宽度，以保证在大屏幕上也不会显得过大 */
+    height: auto;
+}

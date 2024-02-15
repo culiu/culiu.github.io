@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>我的航海帆船之旅</title>
+<style>
+    body {
+        background-color: skyblue;
+    }
+    h1 {
+        text-align: center;
+        color: white;
+    }
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    .mySlides {
+        display: none;
+        padding: 10px;
+    }
+    .fade {
+        animation: fade 2s infinite;
+    }
+    @keyframes fade {
+        from { opacity: 1; }
+        to { opacity: 0.5; }
+    }
+    .text-section {
+        margin: auto;
+        width: 80%;
+        text-align: justify;
+    }
+</style>
+</head>
+<body>
+<h1>我的航海帆船之旅</h1>
+<div class="slideshow-container">
+<div class="mySlides fade" data-targetSlide="1">
+<img src="temp_photo_1.jpg" style="width:100%">
+</div>
+<div class="mySlides fade" data-targetSlide="2">
+<img src="temp_photo_2.jpg" style="width:100%">
+</div>
+</div>
+<div class="text-section">
+<h2>个人介绍</h2>
+<p>我叫XXX，XX岁，来自XXX。我热爱帆船运动，对航海和探索海洋充满热情...</p>
+<h2>近况</h2>
+<p>这几天我在做...</p>
+</div>
+<script>
+window.onload = function() {
+    let slideIndex = 0;
+    let slides = document.getElementsByClassName("mySlides");
+    let navDots = document.getElementsByClassName("dot");
+
+    let slideShowTimeout = setTimeout(showSlide, 2000);
+
+    function showSlide() {
+        slides[slideIndex].style.display = "none";
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex].style.display = "block";
+
+        let dots = document.getElementsByClassName("dot");
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        document.getElementsByClassName("dot")[slideIndex-1].className += " active";
+
+        slideShowTimeout = setTimeout(showSlide, 2000); 
+    }
+
+    for (let i = 0; i < navDots.length; i++) {
+        navDots[i].addEventListener("click", function() {
