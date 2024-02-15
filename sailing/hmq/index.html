@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+        body {
+            background-color: #003366;
+            color: #FFFF00; /* Yellow text color */
+        }
+
+        #introduction, #gallery, #experience, #interests {
+            margin-bottom: 20px;
+        }
+
+        #carousel {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        h1, h2 {
+            color: #FFFF00; /* Yellow text color */
+        }
+
+        p {
+            color: #FFFF00; /* Yellow text color */
+        }
+
+        #introduction p, #experience p, #interests p {
+            margin-bottom: 10px;
+        }
+
+        /* 图库样式 */
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 三列布局 */
+            grid-gap: 10px; /* 照片之间的间隙 */
+            margin-bottom: 20px;
+        }
+
+        .photo {
+            width: 100%; /* 图片宽度 */
+            height: 200px; /* 图片高度，可根据需要调整 */
+            background-size: cover;
+            background-position: center;
+            /* 在此添加更多样式，如边框等 */
+        }
+    </style>
+</head>
+<body>
+    <section id="introduction">
+        <h1>我的个人介绍</h1>
+        <p>我叫何孟谦，是一名五年级学生，来自上海，我的目标是考上尚时中学。我正在参加一个帆船训练营。我喜欢航海，阅读和唱歌。我家里养了两只猫。我是一个乐天派，每天都很开心。这次参加航海营让我有很多收获。</p>
+        </section>
+        <section id="experience">
+        <h2>我的收获</h2>
+        <p>我学习了如何操作帆船，如何驾驶帆船和如何系绳结。我还知道了很多AI软件并运用它们。</p>
+        </section>
+        <section id="interests">
+        <h2>个人感受</h2>
+        <p>这次帆船之旅非常有意思，AI也拓宽了我的眼界 ,对我来说是全新的体验</p>
+        </section>
+    <!-- 新增的图库部分 -->
+    <section id="gallery">
+        <div class="photo" id="photo1" style="background-image: url('photo1.png');"></div>
+        <div class="photo" id="photo2" style="background-image: url('photo2.png');"></div>
+        <div class="photo" id="photo3" style="background-image: url('photo3.png');"></div>
+        <div class="photo" id="photo4" style="background-image: url('photo4.png');"></div>
+        <div class="photo" id="photo5" style="background-image: url('photo5.png');"></div>
+        <div class="photo" id="photo6" style="background-image: url('photo6.png');"></div>
+        <div class="photo" id="photo7" style="background-image: url('photo7.png');"></div>
+        <div class="photo" id="photo8" style="background-image: url('photo8.png');"></div>
+        <div class="photo" id="photo9" style="background-image: url('photo9.png');"></div>
+    </section>
+</body>
+</html>

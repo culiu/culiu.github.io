@@ -1,0 +1,27 @@
+#introduction, #gallery, #experience, #interests {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #0000FF;
+}
+
+p {
+    color: #FFFFFF;
+}
+
+#introduction p, #experience p, #interests p {
+    margin-bottom: 10px;
+}
+
+#gallery {
+    text-align: center;
+}
+
+#carousel {
+    margin: auto;
+}
+
+.carousel-item {
+    transition: left 1s;
+}
